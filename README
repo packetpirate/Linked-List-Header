@@ -1,0 +1,66 @@
+Project: Linked List Header
+Author: Darin Beaudreau
+
+This header file was created to assist in the creation and modification
+of linked lists. This is a short documentation of the functions in
+the header file and what they do.
+
+Constructors & Destructors
+--------------------------
+List()
+  - The default constructor. It creates a new, empty list.
+~List()
+  - The destructor. Calls the destroy() function.
+
+List Manipulation
+-----------------
+void destroy()
+  - Destroys the list by de-allocating the memory of the nodes.
+void add(T newData)
+  - Adds a new node to the list with the data specified in the parameter.
+void remove(int pos)
+  - Removes the node at position [pos] by de-allocating its memory.
+void remove(int start, int end)
+  - Removes the nodes between positions [start] and [end].
+void push_back()
+  - Deletes the first node in the list.
+void pop_back()
+  - Deletes the last node in the list.
+void sort(bool asc)
+  - Sorts the nodes in the list. If the boolean "asc" is true, the nodes are
+    sorted in ascending order.
+void swap(node<T> *i, node<T> *j)
+  - Swaps the data of two nodes. Primarily used in the sort() function.
+
+Position-based Functions
+------------------------
+T front()
+  - Returns the data in the first node in the list.
+T back()
+  - Returns the data in the last node in the list.
+T get(int pos)
+  - Returns the data in the node at position [pos].
+void set(int pos, T newData)
+  - Sets the data of the node at position [pos] to newData.
+int find(T key)
+  - Returns the position of the first occurrence of the key.
+    Returns NULL if the key is not found in the list.
+
+Size-based Functions
+--------------------
+bool isEmpty()
+  - Returns true if the list contains no nodes.
+int length()
+  - Returns the value of the "size" variable containing
+    the length of the list.
+
+Printing Functions
+------------------
+void printList()
+  - Prints all of the elements in the list using the cout stream.
+    Elements are separated by spaces.
+void printElem(int pos)
+  - Prints the element at position [pos] using the cout stream.
+void printElem(int start, int end)
+  - Prints the elements in the list between positions [start]
+    and [end] using the cout stream.
